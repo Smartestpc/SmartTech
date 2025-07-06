@@ -1,0 +1,526 @@
+*{
+    font-family: arial;
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * CORE CONFIG
+ * This powers everything from utility class generation to breakpoints
+ * to enabling/disabling pre-built components/utilities.
+ */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  letter-spacing: -0.01em;
+}
+
+/* All elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+}
+
+:focus {
+  outline: none;
+  outline-offset: 0.25rem;
+}
+
+main:focus {
+  outline: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    font-family: arial;
+}
+
+nav{
+    display: block;
+    width: 100%;
+    background-color: #1941ed;
+
+}
+
+.logo{
+  height: 100%;
+}
+
+nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none;
+    float: right;
+    height: 50px;
+    line-height: 50px;
+    margin-right: 10px;
+    font-weight: 600;
+    font-size: 14px;
+}
+nav ul li a:hover{
+    color: #f2f2f2d3;
+    transition: 0.3s ease-in;
+}
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    padding: 0 30px;
+    width: 100%;
+    text-align: center;
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+.btn1{
+    border: none;
+    border-radius: 10px;
+    height: 80%;
+    width: 100%;
+    text-align: center;
+    background: #ac5919;
+    border: none;
+    transition: 0.3s ease-in;
+}
+
+.btn1:hover{
+    background-color: #ac5919a4;
+}
+
+
+.sidebar{
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    background-color: #ffffff31;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar li {
+    width: 100%;
+    margin: 5px 0;
+}
+
+@media(max-width:1000px) {
+    .hideOnMobile{
+        display: none;
+    }
+    
+}
+
+@media(max-width:500px) {
+    .sidebar{
+        width: 100%;
+    }
+    
+}
+
+@media(min-width:1000px) {
+    .menuicon{
+        display: none;
+    }
+    
+}
+
+.hero{
+  height: fit-content;
+  width: 100vw;
+  background: #ffffff;
+  background-size: cover;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+.wrapper-hero{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+  background-color: #fff;
+  align-items: center;
+}
+
+.hero-about{
+  padding-top: 5px;
+  padding-left: 10px;
+  width: 320px;
+  height: 50%;
+}
+
+.hero-about h2{
+  font-family: arial;
+  margin: 0 auto;
+  color: #000;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+
+.hero-about h3{
+  margin-bottom: 5px;
+  text-align: center;
+  color: #131212c2;
+  font-family: arial;
+  font-weight: 600;
+}
+
+.hero-about p{
+  text-align: start;
+  font: 1em sans-serif;
+  color: #f0f0f0;
+  width: 80%;
+  margin-left: 0px;
+  margin-bottom: 15px;
+}
+
+.hero-img{
+  margin-right: 10px;
+  width: 150px;
+  height: 150px;
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+
+.hero-img1{
+  content: "";
+  border: 2px solid #ffffff;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.hero-img img{
+  border: 2px double #000;
+  border-radius: 50%;
+}
+
+.getme{
+  margin: 5px auto;
+  
+  height: auto;
+  display: flex;
+  margin-bottom: 5px;
+  gap: 15px;
+}
+
+.getme li{
+  background: #ff0000;
+  display: inline-block;
+  border-radius: 10px;
+  max-height: 40px;
+  width: 140px;
+  align-self: center;
+}
+
+.getme li:hover{
+  background: rgb(243, 18, 18);
+  transform: scale(0.98);
+}
+.getme a{
+  color: #f0f0f0;
+  font-family: sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 40px;
+  display: flex;
+  justify-self: center;
+  text-align: center;
+}
+
+.mission {
+  position: relative;
+  margin: 2px auto;
+  width: 320px;
+  text-align: center;
+}
+
+.mission h3{
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  width: 120px;
+  position: relative;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.mission p {
+  margin: 5px auto;
+}
+
+
+.mission h3::before {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 0;
+  background-color: #ac5919;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.mission h3:hover::before {
+  width: 100%;
+}
+
+.portfoliowrap{
+  width: 320px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px #000;
+  border-radius: 1rem;
+}
+
+.hero-discription, 
+.portfolio-wrapper{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 10px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.portfolio-wrapper{
+  height: 60px;
+  background-color: #eeeeee;
+  width: 320px;
+  display: flex;
+  border-radius: 1rem;
+  padding: 10px;
+  margin: 10px auto;
+  justify-content: space-evenly;
+}
+
+.portfolio-tab,
+.skills-tab {
+  width: 140px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  gap: 10px;
+  background-color: #ffffff;
+  border-radius: 1rem;
+}
+
+.portfolio-content{
+  margin: 0 auto;
+  max-width: 320px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+@media (min-width:700px) {
+  .portfolio-content{
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: repeat(2, 1fr);
+  }
+}
+.portfolio-img{
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.portfolio-img:hover, 
+.portfolio-tab:hover, 
+.skills-tab:hover{
+  transition: 0.3s ease;
+  transform: scale(0.9);
+}
+
+footer{
+  position: relative;
+  bottom: 0;
+  margin: 3px auto;
+  width: 250px;
+  text-align: center;
+}
+
+footer p{
+  font-weight: bolder;
+}
+
+.skills{
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 15px;
+  width: 300px;
+  display: none;
+}
+.Skills-info {
+  text-align: center;
+  border-radius: 7px;
+  background: #eee;
+  padding: 10px 25px;
+  flex-grow: 20;
+  font-weight: 600;
+}
+
+/*
+
+.testimonial {
+  width: 320px;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  padding: 10px 20px;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.testimonial-bg {
+  background: url(images/logo4.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 150px;
+  border-radius: 1rem;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-bg:hover {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/logo4.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(0.9);
+  transition: 0.5s;
+
+}
+.testimonial-card {
+  
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  backdrop-filter: blur(10px);
+  background: #f0f0f018;
+}
+
+.testimonial-card p {
+  color: #f0f0f0;
+  font-family: arial;
+}
+.starcard {
+position: relative;
+left: 0;
+height: fit-content;
+width: fit-content;
+bottom: 0;
+}
+
+.testimonial-card article {
+  display: inline-block;
+  width: 15px;
+}
+
+*/
+
+.testimonial {
+  width: 320px;
+  margin: 0 auto;
+  height: 300px;
+  background:url(images/mmg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+}
+
+.testimonial p {
+  width: 90%;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.testimonial img {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  margin: 10px auto;
+}
